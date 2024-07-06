@@ -25,7 +25,7 @@ class Solution:
         return  right + 1 if  A[right] < B else right 
 
 solution  = Solution()
-print("---------------For LinearSearch-----------------")
+
 searchIdx  = solution.searchInsert([1, 3, 5, 6], 5)
 print(searchIdx)
 

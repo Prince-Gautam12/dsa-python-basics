@@ -1,4 +1,5 @@
 class Solution:
+    # linear Search
     def findPeakElement(self, A):
         l = len(A)
         
@@ -9,7 +10,7 @@ class Solution:
         if A[0] >= A[1] : return A[0]
         if A[l-1] >= A[l-2] : return A[l-1]
     
-
+    # Binary Search
     def peakElementBinary(self, A):
         l = len(A)
         left = 0 
@@ -25,10 +26,6 @@ class Solution:
         pass
         
 
-                
-        
-
-
 solution = Solution()
 find = solution.findPeakElement([5,7,100,12])
 print(find)
@@ -43,5 +40,5 @@ print(findBin)
 findBin = solution.peakElementBinary([5,7,100,12])
 print(findBin)
 
-findBin = solution.peakElementBinary([1,2,3,4,5])
+findBin = solution.peakElementBinary([23, 7, 35, 32, 10, 19, 4, 55, 28, 3, 41, 8, 36, 12, 27, 15, 50, 21, 5, 34])
 print(findBin)
