@@ -15,7 +15,7 @@ class Solution:
         #if A[0] > B : return 0
         while left < right:
             mid = (right+left)//2
-            if B == A[mid]:
+            if A[mid] == B:
                 return mid
             if B > A[mid]:
                 left = mid + 1
