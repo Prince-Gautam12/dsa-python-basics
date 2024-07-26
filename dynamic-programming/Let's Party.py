@@ -34,11 +34,11 @@ class Solution:
 
 
 solution = Solution()
-answer = solution.solve(3)
+answer = solution.party(3)
 print(answer) 
 
-answer = solution.partyTab(5)
+answer = solution.party(10)
 print(answer)
 
-# answer = solution.solve(60041)
-# print(answer)
+answer = solution.solve(60041)
+print(answer)
