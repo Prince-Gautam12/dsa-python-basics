@@ -50,7 +50,12 @@ class LinkedList :
                 currentNode.next = newNode
     
     def deleteAtBegining(self):
-        pass
+        if self.__head != None:
+            temp = self.__head
+            self.__head = self.__head.next
+            return temp.data
+        else :
+            raise Exception("No element")
     def deleteAtEnd(self):
         if self.__head != None :
             if self.__head.next == None:
@@ -77,6 +82,22 @@ class LinkedList :
         self.__head = None
 
 class LinkedListDemo :
+    # Testing stack 
+    stack = LinkedList()
+    stack.insertAtBegining(3)
+    stack.insertAtBegining(4)
+    stack.insertAtBegining(62)
+    stack.insertAtBegining(6)
+    stack.insertAtBegining(32)
+    print(stack)
+    print(stack.deleteAtBegining())
+    print(stack.deleteAtBegining())
+    print(stack.deleteAtBegining())
+    print(stack.deleteAtBegining())
+    print(stack.deleteAtBegining())
+    print(stack.deleteAtBegining())
+
+
     linkedList = LinkedList()
     print(linkedList)
     linkedList.insertAtBegining(4)
