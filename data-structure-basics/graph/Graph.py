@@ -34,12 +34,19 @@ class AdjList:
 
             if self.adjList[source] == None:
                 self.adjList[source] = []
-            self.adjList[source].append([dest, weight])
+            
+            if isWeighted:
+                self.adjList[source].append([dest, weight])
+            else :
+                self.adjList[source].append(dest)
 
             if bidirectional :
                 if self.adjList[dest] == None:
                     self.adjList[dest] = []
-                self.adjList[dest].append([source,weight])
+                if isWeighted:
+                    self.adjList[dest].append([source,weight])
+                else :
+                    self.adjList[dest].append(source)
 
     def addNewNode(self):
         self.adjList.append(None)
@@ -56,8 +63,10 @@ class AdjList:
             self.adjList[dest].append([source,weight])
 
     def print(self):
+        i = 0
         for list in self.adjList:
-            print(list)
+            print(f'{i}-> {list}')
+            i+=1
 
 
 
@@ -75,7 +84,8 @@ class GraphDemo:
     
     def demoAdjList(self):
         print("========== UnWeighted =========")
-        adjList = AdjList([[0,1],[1,3],[2,3],[3,4]], 5, False)
+        adjList = AdjList([[0,1],[0,3],[1,3],[2,3],[3,4]], 5, True)
+        adjList.print()
         print("============ BiDir =============")
         adjList = AdjList([[0,1],[1,3],[2,3],[3,4]], 5, True)
         print("========== Weighted =========")
@@ -90,5 +100,5 @@ class GraphDemo:
         adjList.print()
 
 graphDemo = GraphDemo()
-graphDemo.demoAdjList()
+# graphDemo.demoAdjList()
 
