@@ -20,7 +20,7 @@ class AdjMatrix:
 
 
 class AdjList:
-    def __init__(self, connections, numberOfNodes, bidirectional, isWeighted= False):
+    def __init__(self, connections, numberOfNodes, bidirectional, isWeighted = False):
         self.bidirectional = bidirectional
         self.isWeighted = isWeighted
         self.adjList = [None]*numberOfNodes
@@ -101,4 +101,3 @@ class GraphDemo:
 
 graphDemo = GraphDemo()
 # graphDemo.demoAdjList()
-
